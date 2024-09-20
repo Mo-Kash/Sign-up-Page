@@ -1,0 +1,94 @@
+@font-face {
+    font-family: 'Norse Bold';
+    src: url("/home/mohit/Downloads/Norse-Bold.otf");
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root{
+    --button-colour: #596D48;
+    --border-colour: #E5E7EB;
+    --invalid-colour: red;
+}
+
+body{
+    display: flex;
+    margin:0;
+    padding: 0;
+}
+.sidebar{
+    height: 100vh;
+    width: 40vw;
+    object-fit: cover;
+    background-image: url("./Pictures/background.jpg");
+    background-size: cover;
+    text-align: center;
+}
+.odinlogo{
+    width:40vw;
+    margin-top: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 60px;
+    text-align: center;
+    font-family: 'Norse Bold';  
+    background-color: rgba(0,0,0,0.4);
+}
+.odinlogo img{
+    width: 150px;
+    height: auto;
+}
+.maincontent{
+    display:flex;
+    flex-direction: column;
+    align-items:flex-start;
+    justify-content: center;
+    width: 50vw;
+    font-family: "Roboto", sans-serif;
+}
+form{
+    display:inline-block;
+    
+}
+.details{
+    border: 1px solid #ccc;
+    border-radius: 1em;
+    padding:1em;
+    margin-left:100px;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+li{
+    display: inline-block;
+    margin-right: 75px;
+    margin-bottom: 25px;
+}
+.namesec,.contactsec,.passwdsec{
+    display:flex;
+    align-items: center;
+    justify-content: left;
+    gap: 100px;
+}
+
+.description{
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 100px;
+}
+.headertxt{
+    font-size: 24px;
+    font-weight: bold;
+}
+.submitbutt{
+    margin-top:32px;
+    margin-left:100px;
+}
+.footer{
+    margin-top:32px;
+    margin-left:100px;
+}
