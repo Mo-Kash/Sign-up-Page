@@ -6,6 +6,7 @@
 
 :root{
     --button-colour: #596D48;
+    --button-colour-darker: #465c34;
     --border-colour: #E5E7EB;
     --invalid-colour: red;
 }
@@ -44,18 +45,21 @@ body{
     flex-direction: column;
     align-items:flex-start;
     justify-content: center;
-    width: 50vw;
     font-family: "Roboto", sans-serif;
+    background-color: rgb(235, 231, 231);
 }
 form{
     display:inline-block;
     
 }
 .details{
-    border: 1px solid #ccc;
-    border-radius: 1em;
-    padding:1em;
-    margin-left:100px;
+    height: 30%;
+    box-shadow: 0 3px 5px rgb(172, 169, 169);
+    background-color: white;
+    padding-top:15px;
+    padding-bottom:10px;
+    padding-left:100px;
+    padding-right:calc(60vw - 637.667px);
 }
 
 ul{
@@ -65,30 +69,59 @@ ul{
 }
 li{
     display: inline-block;
-    margin-right: 75px;
+    margin-right:3px;
     margin-bottom: 25px;
-}
-.namesec,.contactsec,.passwdsec{
-    display:flex;
-    align-items: center;
-    justify-content: left;
-    gap: 100px;
 }
 
 .description{
     font-size: 24px;
-    font-weight: bold;
+    font-weight: 500;
     margin-left: 100px;
+    width:60%;
 }
 .headertxt{
     font-size: 24px;
-    font-weight: bold;
+    font-weight: 500;
 }
 .submitbutt{
     margin-top:32px;
     margin-left:100px;
 }
+
 .footer{
     margin-top:32px;
     margin-left:100px;
 }
+label{
+    font-size: 0.65rem;
+}
+input[type="text"],input[type="email"],input[type="password"]{
+    height: 3.5vh;
+    width: 30vh;
+    border: solid 1.25px rgb(206, 204, 204);
+    border-radius: 5px;
+}
+
+input[type="submit"]{
+    border:none;
+    text-decoration: none;
+    background-color: var(--button-colour);
+    width:240px;
+    height:auto;
+    padding: 10px 40px 10px 40px;
+    color: white;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    transition: 0.5s;
+}
+input[type="submit"]:hover{
+    cursor:pointer;
+    background-color: var(--button-colour-darker);
+}
+a{
+    text-decoration: none;
+    color:var(--button-colour);
+    font-weight: 600;
+}
+
