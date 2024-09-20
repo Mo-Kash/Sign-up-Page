@@ -12,6 +12,9 @@
             <img src="./Pictures/odin-lined.png" alt="">
             <h1>ODIN</h1>
         </div>
+        <div class="credit">
+            <p>Photo by <a href="https://unsplash.com/@haliewestphoto" target="_blank">Halie West</a> on <a href="https://unsplash.com/" target="_blank">Unsplash</a></p>
+        </div>
     </div>
     <div class="maincontent">
         <div class="description">
@@ -54,13 +57,53 @@
                     </ul>
                 </div>
                 <div class="submitbutt">
-                    <input type="submit" value="Create Account">
+                    <button type="submit" id="btn">Create Account</button>
+                    <label for="password_alert" id="password_alert" style="color: red">*Passwords do not match</label><br />
                 </div>
             </form>
         </div>
         <div class="footer">
-            <p>Already have an account? <a href="#">Log in</a></p>
+            <p>Already have an account? <a href="https://github.com/Mo-Kash/Sign-up-Page" target="_blank">Log in</a></p>
         </div>
     </div>
 </body>
 </html>
+
+<script>
+    document.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const fname = document.getElementById('fname').value;
+        const lname = document.getElementById('lname').value;
+        const email = document.getElementById('email').value;
+        const pnum = document.getElementById('pnum').value;
+        const password = document.getElementById('pwd').value;
+        const confirm_password = document.getElementById('cpwd').value;
+        if(fname!='' && lname!='' && email!='' && pnum!='' && password!='' && confirm_password!='') {
+            if(password!==confirm_password) {
+                document.getElementById('cpwd').value = null;
+                document.getElementById('pwd').className = 'passwordAlert';
+                document.getElementById('cpwd').className = 'passwordAlert';
+                document.getElementById("password_alert").style.display = 'block';
+                document.getElementById('pwd').style.border = '1.25px solid red';
+                document.getElementById('cpwd').style.border = '1.25px solid red';
+            }
+            else{
+                document.getElementById("password_alert").style.display = 'none';
+                document.getElementById('pwd').style.border = '1.25px solid #E5E7EB';
+                document.getElementById('cpwd').style.border = '1.25px solid #E5E7EB';
+                document.getElementById('pwd').className = 'pwd';
+                document.getElementById('cpwd').className = 'cpwd';
+                document.getElementById('fname').value = null;
+                document.getElementById('lname').value = null;
+                document.getElementById('email').value = null;
+                document.getElementById('pnum').value = null;
+                document.getElementById('pwd').value = null;
+                document.getElementById('cpwd').value = null;
+                alert("Account created successfully!!");
+            }
+        }
+        else{
+            alert("Please fill all the fields");
+        }
+      });
+</script>
